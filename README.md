@@ -23,12 +23,16 @@ if (test !== "a") {
 ```
 
 你能第一眼就看出这三个代码块中的问题吗?  
-如果不可以,那么借助 Typescript,就可以很方便的帮助我们预先防范这些错误的发生,也可以很清晰的查看他们中
-的错误出现在哪里.
+如果不可以,那么借助 Typescript,就可以很方便的帮助我们预先防范这些错误的发生,也可以很清晰的查看他们中的错误出现在哪里.
 
 1. toLocalLowarCase 单词拼写错误
 2. Math.random 必须调用才能与数值进行对比
 3. 逻辑错误
+
+## 如何快速把玩 Typescript？
+
+学习 TypeScript 我们只需要在这个线上网站 👉[TypeScript Playground](https://www.typescriptlang.org/play) 中进行快速的演练。  
+Ts 编译与 Ts 配置等内容我放在最后面讲。
 
 ## 显示类型与隐式类型
 
@@ -44,6 +48,18 @@ cosnt a:string="1234"
 ```typescript
 // 比如 👇
 const b = "abcd";
+```
+
+## 类型断言
+
+非空断言
+
+```typescript
+
+```
+
+```typescript
+
 ```
 
 ## tsc
@@ -164,8 +180,7 @@ const test = (str: string | string[]): string => {
 
 ## 类型别名
 
-上面写了，很多类型，但是当我们很多地方需要用到同一种类型的时候，总不能在每一个需要定义类型的地方重复
-写那些复杂的类型吧？
+上面写了，很多类型，但是当我们很多地方需要用到同一种类型的时候，总不能在每一个需要定义类型的地方重复写那些复杂的类型吧？
 
 这个时候我们就需要，把类型抽出来，给类型定义别名  
 可以通过以下方式 👇
@@ -186,8 +201,7 @@ function getUserInfo() {
 }
 ```
 
-当然也可以用 `interface` 来定义别名，但是 `interface` 只能定义对象形式的类型,关于 `interface` 与
-`type` 的区别下一小节会讲到。
+当然也可以用 `interface` 来定义别名，但是 `interface` 只能定义对象形式的类型,关于 `interface` 与 `type` 的区别下一小节会讲到。
 
 ```typescript
 interface UserInfo {
@@ -202,10 +216,8 @@ let user: UserInfo;
 
 关于 interface 官方给出的说明是
 
-> 1. An interface can be named in an extends or implements clause, but a type alias for an object
->    type
-> 2. literal cannot. An interface can have multiple merged declarations, but a type alias for an
->    object type literal cannot.
+> 1. An interface can be named in an extends or implements clause, but a type alias for an object type
+> 2. literal cannot. An interface can have multiple merged declarations, but a type alias for an object type literal cannot.
 
 所有可以用 interface 定义的类型都可以用 type 来定义
 

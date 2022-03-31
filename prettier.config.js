@@ -5,7 +5,7 @@ module.exports = {
   tabWidth: 2, // 空格数
   useTabs: false, // 是否开启tab
   printWidth: 100, // 换行的宽度
-  proseWrap: "always", // 当超出print width时就折行 always|never|preserve
+  proseWrap: "preserve", // 当超出print width时就折行 always|never|preserve
   semi: true, // 是否在语句末尾打印分号
   singleQuote: false, // 是否使用单引号
   quoteProps: "as-needed", // 对象的key仅在需要时用引号 as-needed|consistent|preserve
