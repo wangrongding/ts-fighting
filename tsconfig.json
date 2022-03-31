@@ -1,0 +1,14 @@
+{
+  /* 配置文件 */
+  "include": ["*.ts"],
+  "exclude": [],
+  // "files": [],
+  "compilerOptions": {
+    "target": "ESNext"
+  },
+  "module": "ES6",
+  "lib": ["ES6", "dom"],
+  "outDir": "./dist",
+  "strict": true
+  // "allowJs": true
+}
